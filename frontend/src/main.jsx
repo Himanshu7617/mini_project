@@ -1,19 +1,28 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import Notification from "./components/Notification.jsx";
+// import Notification from "./components/Notification.jsx";
 import "./index.css";
 
 
-const rootElement = document.getElementById('root');
-const popupElement = document.getElementById('popup-root');
+createRoot(document.getElementById('root')).render(
+  <App></App>
+)
 
-if (rootElement ) {
 
-  createRoot(rootElement).render(<App />);
-}else {
-  createRoot(popupElement).render(<Notification />);
 
-}
+//leave the commented part as it is sir!!!
+
+
+// const rootElement = document.getElementById('root');
+// const popupElement = document.getElementById('popup-root');
+
+// if (rootElement ) {
+
+//   createRoot(rootElement).render(<App />);
+// }else {
+//   createRoot(popupElement).render(<Notification />);
+
+// }
 
 
 // import React from 'react';
