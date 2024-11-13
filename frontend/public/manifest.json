@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "React Notification and Dashboard Extension",
+    "version": "1.0",
+    "description": "A Chrome extension with a popup notification and a dashboard.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "windows"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+   
+    "chrome_url_overrides": {
+        "newtab": "index.html" 
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}

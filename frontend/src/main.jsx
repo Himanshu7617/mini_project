@@ -1,16 +1,31 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
+import Notification from "./components/Notification.jsx";
 import "./index.css";
-import { ThemeProvider } from "@material-tailwind/react";
-import { ComplexNavbar} from "./components/Navbar.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <ThemeProvider>
-      <ComplexNavbar />
-      <App />
 
-    </ThemeProvider>
-  </StrictMode>
-);
+const rootElement = document.getElementById('root');
+const popupElement = document.getElementById('popup-root');
+
+if (rootElement ) {
+
+  createRoot(rootElement).render(<App />);
+}else {
+  createRoot(popupElement).render(<Notification />);
+
+}
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import Notification from './Notification';
+// import Dashboard from './Dashboard';
+
+// const rootElement = document.getElementById('root');
+// const popupElement = document.getElementById('popup-root');
+
+// if (rootElement) {
+//     ReactDOM.render(<Dashboard />, rootElement);
+// } else if (popupElement) {
+//     ReactDOM.render(<Notification />, popupElement);
+// }
