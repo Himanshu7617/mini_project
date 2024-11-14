@@ -4,16 +4,20 @@ import Notification from "./components/Notification.jsx";
 import "./index.css";
 
 
-const rootElement = document.getElementById('root');
-const popupElement = document.getElementById('popup-root');
 
-if (rootElement ) {
+createRoot(document.getElementById('root').render(<App/>));
 
-  createRoot(rootElement).render(<App />);
-}else {
-  createRoot(popupElement).render(<Notification />);
 
-}
+
+// const rootElement = document.getElementById('root');
+// const popupElement = document.getElementById('popup-root');
+
+// if (rootElement ) {
+
+//   createRoot(rootElement).render(<App />);
+// }else {
+//   createRoot(popupElement).render(<Notification />);
+
 
 
 // import React from 'react';
