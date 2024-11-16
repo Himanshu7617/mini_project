@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
@@ -21,19 +20,7 @@ const App = () => {
     </Routes>
     
   )
-=======
-import { Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="flex">
-      <div className="text-xl font-semibold ">Hello World</div>
-      <button className="bg-blue-500 text-white ">
-        <Link to="/dashboard">Dashboard</Link>
-      </button>
-    </div>
-  );
->>>>>>> 33345c478acbec8525f1531a782c7836d95f3ec5
 }
 
 export default App;
