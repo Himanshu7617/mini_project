@@ -1,13 +1,18 @@
 import { createRoot } from "react-dom/client";
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // Importing router components
 import App from "./App.jsx";
+import Dashboard from './pages/Dashboard.jsx'
 // import Notification from "./components/Notification.jsx";
 import "./index.css";
 
-
 createRoot(document.getElementById('root')).render(
-  <App></App>
-)
-
+  <Router>
+    <Routes>
+      <Route path="/" element={<App />} /> {/* Main Route */}
+      <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard Route */}
+    </Routes>
+  </Router>
+);
 
 
 //leave the commented part as it is sir!!!

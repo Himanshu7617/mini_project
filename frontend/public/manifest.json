@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "A Chrome extension with a popup notification and a dashboard.",
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "index.html"
     },
     "permissions": [
         "storage",
@@ -12,10 +12,6 @@
     ],
     "background": {
         "service_worker": "background.js"
-    },
-   
-    "chrome_url_overrides": {
-        "newtab": "index.html" 
     },
     "host_permissions": [
         "<all_urls>"
