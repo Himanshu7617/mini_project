@@ -1,10 +1,18 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { useFirebase } from "../context/FirebaseContext"
+import { useNavigate } from "react-router-dom";
 
 
 const Dashboard = () => {
 
   const firebase = useContext(useFirebase);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(!firebase.isLoggedIn) {
+      navigate('/fluentify/');
+    }
+  }, [firebase, navigate]);
 
 
   return (
