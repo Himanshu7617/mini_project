@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "React Notification and Dashboard Extension",
+    "name": "Fluentify",
     "version": "1.0",
     "description": "A Chrome extension with a popup notification and a dashboard.",
     "action": {
-        "default_popup": "index.html"
+        "default_popup": "../index.html"
     },
     "permissions": [
         "storage",

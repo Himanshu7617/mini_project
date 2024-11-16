@@ -1,35 +1,17 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import Notification from "./components/Notification.jsx";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import FirebaseContext from './context/FirebaseContext';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
-
-
-createRoot(document.getElementById('root').render(<App/>));
-
-
-
-// const rootElement = document.getElementById('root');
-// const popupElement = document.getElementById('popup-root');
-
-// if (rootElement ) {
-
-//   createRoot(rootElement).render(<App />);
-// }else {
-//   createRoot(popupElement).render(<Notification />);
-
-
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Notification from './Notification';
-// import Dashboard from './Dashboard';
-
-// const rootElement = document.getElementById('root');
-// const popupElement = document.getElementById('popup-root');
-
-// if (rootElement) {
-//     ReactDOM.render(<Dashboard />, rootElement);
-// } else if (popupElement) {
-//     ReactDOM.render(<Notification />, popupElement);
-// }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true,}}>
+            <FirebaseContext>
+                <App />
+            </FirebaseContext>
+        </BrowserRouter>
+    </React.StrictMode>
+);
