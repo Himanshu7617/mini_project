@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { useContext, useEffect } from "react"
 import { useFirebase } from "../context/FirebaseContext"
 import { useNavigate } from "react-router-dom";
 
+=======
+import React from 'react'
+import { Link } from 'react-router-dom';
+>>>>>>> 33345c478acbec8525f1531a782c7836d95f3ec5
 
 const Dashboard = () => {
 
@@ -16,6 +21,7 @@ const Dashboard = () => {
 
 
   return (
+<<<<<<< HEAD
     <div>
 
       <div
@@ -25,6 +31,13 @@ const Dashboard = () => {
       </div>
     </div>
   )
+=======
+    <div className="flex flex-col items-center justify-center w-full h-full p-4 bg-gray-100 rounded-lg shadow-lg">
+      <div className="text-xl font-semibold mb-4">Dashboard</div>
+      <button><Link to="/">Back</Link></button>
+    </div>
+  );
+>>>>>>> 33345c478acbec8525f1531a782c7836d95f3ec5
 }
 
 export default Dashboard

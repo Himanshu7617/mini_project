@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
+<<<<<<< HEAD
   background-color: rgb(250, 235, 215);
+=======
+  height: 350px;
+  width: 500px;
+>>>>>>> 33345c478acbec8525f1531a782c7836d95f3ec5
 }
