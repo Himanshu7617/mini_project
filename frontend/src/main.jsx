@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 // import Notification from "./components/Notification.jsx";
@@ -38,3 +39,22 @@ createRoot(document.getElementById('root')).render(
 // } else if (popupElement) {
 //     ReactDOM.render(<Notification />, popupElement);
 // }
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import FirebaseContext from './context/FirebaseContext';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true,}}>
+            <FirebaseContext>
+                <App />
+            </FirebaseContext>
+        </BrowserRouter>
+    </React.StrictMode>
+);
+>>>>>>> HIMANSHU
