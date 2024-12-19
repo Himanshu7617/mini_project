@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Card, Input, Button, Typography, } from "@material-tailwind/react";
 import { useFirebase } from '../context/FirebaseContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
    
 const Login = () => {
 
@@ -84,9 +84,10 @@ const Login = () => {
             </Button>
             <Typography color="gray" className="mt-4 text-center font-normal">
               Don&apos;t have an account?{" "}
-              <a href="/signup" className="font-medium text-gray-900">
-                Sign Up
-              </a>
+              <p className="font-medium text-gray-900">
+                        <Link to={'/login'}>Sign Up</Link>
+                        
+                        </p>
             </Typography>
             <Typography color="gray" className="mt-4 text-center font-normal">
               {" "}
