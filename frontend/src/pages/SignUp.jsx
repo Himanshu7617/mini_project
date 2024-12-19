@@ -85,7 +85,7 @@ const SignUp = () => {
         </Button>
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
-          <a href="/wordwise/login" className="font-medium text-gray-900">
+          <a href="/login" className="font-medium text-gray-900">
             Sign In
           </a>
         </Typography>
