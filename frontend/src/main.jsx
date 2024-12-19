@@ -7,7 +7,7 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-        <BrowserRouter basename='/wordwise' future={{ v7_startTransition: true, v7_relativeSplatPath: true,}}>
+        <BrowserRouter  future={{ v7_startTransition: true, v7_relativeSplatPath: true,}}>
             <FirebaseContext>
                 <App />
             </FirebaseContext>
