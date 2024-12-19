@@ -84,8 +84,8 @@ const Login = () => {
             </Button>
             <Typography color="gray" className="mt-4 text-center font-normal">
               Don&apos;t have an account?{" "}
-              <p className="font-medium text-gray-900">
-                        <Link to={'/login'}>Sign Up</Link>
+              <p className=" font-medium text-gray-900">
+                        <Link to={'/signup'}>Sign Up</Link>
                         
                         </p>
             </Typography>
