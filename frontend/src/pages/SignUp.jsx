@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Card, Input,  Button,  Typography } from "@material-tailwind/react";
 import { useFirebase } from "../context/FirebaseContext";
 import { useNavigate } from "react-router-dom";
+
  
 const SignUp = () => {
 
@@ -13,13 +14,20 @@ const SignUp = () => {
     e.preventDefault();
     
     //calling the signup function 
-    firebase.createUser( firebase.email, firebase.password)
+    
+    const success = firebase.createUser( firebase.email, firebase.password);
+    if(success){
+      firebase.addUserIntoDatabase(firebase.name, firebase.email, "German", firebase.avatarIndex);
+      
+    }
+
+  
   }
 
   
   useEffect(() => {
     if(firebase.isLoggedIn){
-      navigate('/fluentify/dashboard');
+      navigate('/dashboard');
     }
   },[firebase, navigate])
 
@@ -77,7 +85,7 @@ const SignUp = () => {
         </Button>
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
-          <a href="/fluentify/login" className="font-medium text-gray-900">
+          <a href="/wordwise/login" className="font-medium text-gray-900">
             Sign In
           </a>
         </Typography>
