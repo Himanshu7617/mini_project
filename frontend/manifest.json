@@ -1,0 +1,8 @@
+{
+    "manifest_version": 3,
+    "name": "wordwise extension",
+    "version": "1.0",
+    "permissions": ["storage"],
+    
+  }
+  
