@@ -93,15 +93,7 @@ const FirebaseContext = (props) => {
         }
     }
 
-    //storing the current user id to the indexedDB
-    const storeUserUID = async () => {
-
-        const valueToSend = "Hello from your website!";
-
-        // Send the value to the extension via `postMessage`
-        window.postMessage({ type: "FROM_WEBSITE", value: valueToSend }, "*");
-
-    }
+  
 
     //checking where the user has logged in b4 or not
     useEffect(() => {
@@ -123,10 +115,7 @@ const FirebaseContext = (props) => {
     }, [])
 
 
-    useEffect(() => {
-        storeUserUID();
-    }, []);
-
+    
 
     // useEffect(()=>{
     //   if(!gotData && user){
