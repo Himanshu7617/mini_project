@@ -114,7 +114,7 @@ const FirebaseContext = (props) => {
 
     useEffect(()=>{
         const alreadyStoredID = localStorage.getItem("wordwise_user_id");
-        if(!alreadyStoredID.length > 0){
+        if(alreadyStoredID && !alreadyStoredID.length > 0){
             localStorage.setItem("wordwise_user_id", userID);
         }
     },[userID]);
@@ -207,7 +207,7 @@ const FirebaseContext = (props) => {
         }
     }
 
-F
+
     //reset password
     const resetUserPassword = async() => {
         sendPasswordResetEmail(auth , email)
