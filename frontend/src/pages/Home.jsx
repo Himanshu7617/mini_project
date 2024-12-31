@@ -144,7 +144,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        if (firebase.isLoggedIn && firebase.loading === false) {
+        if (firebase.isLoggedIn) {
             navigate('/dashboard', { replace: true });
         }
     }, [firebase, navigate])

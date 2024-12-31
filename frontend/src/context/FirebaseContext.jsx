@@ -112,12 +112,17 @@ const FirebaseContext = (props) => {
         })
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
+        console.log("Running useEffect...");
         const alreadyStoredID = localStorage.getItem("wordwise_user_id");
-        if(alreadyStoredID && !alreadyStoredID.length > 0){
+        console.log("alreadyStoredID:", alreadyStoredID);
+        console.log("userID:", userID);
+        if (!alreadyStoredID) {
             localStorage.setItem("wordwise_user_id", userID);
+            console.log("Set userID in localStorage:", userID);
         }
-    },[userID]);
+    }, [userID]);
+    
 
     // useEffect(()=>{
     //   if(!gotData && user){
